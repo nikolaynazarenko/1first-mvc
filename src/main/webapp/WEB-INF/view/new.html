@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create new User</title>
+</head>
+<body>
+<form th:method = "POST" th:action = "@{/}" th:object = "${user}">
+    <div class="input-group input-group-lg">
+        <span class="input-group-text" id="name">Enter name</span>
+        <input type="text" th:field = "*{name}" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+    </div>
+    <br/>
+    <div class="input-group input-group-lg">
+        <span class="input-group-text" id="email">Enter email</span>
+        <input type="text" th:field = "*{email}" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+    </div>
+    <br/>
+    <div class="input-group input-group-lg">
+        <span class="input-group-text" id="age">Enter age</span>
+        <input type="text" th:field = "*{age}" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+    </div>
+    <input type ="submit" value="Create">
+</form>
+</body>
+</html>
